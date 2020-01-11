@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { navigate } from 'gatsby'
+import { navigate } from 'gatsby-plugin-intl'
 
 import BowlingBallIcon from '../../images/icons/bowling-ball-icon.svg'
 
@@ -80,7 +80,7 @@ const NavigationLink = ({ to, children }) => {
       <StyledLink
         to={to}
         activeClassName="active-link"
-        ref={node => setActiveIndicator(node)}
+        innerRef={node => setActiveIndicator(node)}
         onClick={changeActiveLink}
       >
         {children}

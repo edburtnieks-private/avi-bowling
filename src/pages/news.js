@@ -4,16 +4,16 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
-const IndexPage = () => {
+const NewsPage = () => {
   const intl = useIntl()
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation_home' })} />
+      <SEO title={intl.formatMessage({ id: 'navigation_news' })} />
 
-      <h1>AVI Bowling</h1>
+      <h1>News Page</h1>
     </Layout>
   )
 }
 
-export default IndexPage
+export default NewsPage

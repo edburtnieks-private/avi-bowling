@@ -1,14 +1,21 @@
-import React from "react"
+import React from 'react'
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Layout } from '../components/Layout'
+import { SEO } from '../components/SEO'
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const intl = useIntl()
+
+  return (
+    <Layout>
+      <SEO title={`404: ${intl.formatMessage({ id: 'not_found' })}`} />
+
+      <h1>
+        <FormattedMessage id="page_not_found" />
+      </h1>
+    </Layout>
+  )
+}
 
 export default NotFoundPage

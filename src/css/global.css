@@ -1,0 +1,84 @@
+:root {
+  /* Breakpoints */
+  --bp-desktop-xl: 1440px;
+
+  /* Border Radius */
+  --br-base: 4px;
+
+  /* Box Shadows */
+  --bs-header: 0px 4px 8px -2px var(--c-mercury-50);
+  --bs-navigation: 0px 0px 24px 4px var(--c-mercury-50);
+
+  /* Border Width */
+  --bw-btn-s: 1px;
+
+  /* Colors */
+  --c-white: #fff;
+  --c-mine-shaft: #3a3a3a;
+
+  --c-green: #4cb114;
+  --c-green-darker: #3c8c10;
+
+  /* Opacity Colors */
+  --c-mercury-50: #e1e1e180;
+
+  /* Font Family */
+  --ff-base: 'Montserrat', sans-serif;
+
+  /* Font Size */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-s: 0.875rem; /* 14px */
+  --fs-base: 16px;
+
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Letter Spacing */
+  --ls-btn-s: 0.48px;
+
+  /* Spacing */
+  --s-0: 0;
+  --s-xxxs: 0.25rem; /* 4px */
+  --s-xxs: 0.5rem; /* 8px */
+  --s-xs: 0.75rem; /* 12px */
+  --s-base: 1rem; /* 16px */
+  --s-s: 1.5rem; /* 24px */
+  --s-m: 2rem; /* 32px */
+  --s-l: 3rem; /* 48px */
+  --s-xxl: 6rem; /* 96px */
+
+  --s-btn-s-mobile: var(--s-xs) var(--s-base);
+  --s-btn-s: var(--s-xxs) var(--s-base);
+
+  /* Z Index */
+  --zi-navigation: 1;
+  --zi-navigation-toggle: 2;
+}
+
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
+
+html {
+  font-size: var(--fs-base);
+  line-height: 1;
+}
+
+body {
+  color: var(--c-mine-shaft);
+  font-family: var(--ff-base);
+}
+
+#___gatsby {
+  overflow-x: hidden;
+  position: relative;
+}
+
+button {
+  color: var(--c-mine-shaft);
+  cursor: pointer;
+  font-size: var(--fs-s);
+}

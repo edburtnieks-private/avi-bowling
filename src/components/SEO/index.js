@@ -4,16 +4,16 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const propTypes = {
-  lang: 'en',
-  meta: [],
-  description: '',
-}
-
-const defaultProps = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+}
+
+const defaultProps = {
+  lang: 'en',
+  meta: [],
+  description: '',
 }
 
 const SEO = ({ description, lang, meta, title }) => {

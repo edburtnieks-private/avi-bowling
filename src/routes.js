@@ -1,0 +1,6 @@
+export const HOME = '/'
+export const GALLERY = '/gallery'
+export const SPECIAL_OFFERS = '/special-offers'
+export const NEWS = '/news'
+export const CONTACTS = '/contacts'
+export const RESERVATION = '/reservation'

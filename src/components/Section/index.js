@@ -7,6 +7,7 @@ const propTypes = {
   spacingTop: PropTypes.string,
   spacingTopTablet: PropTypes.string,
   maxWidth: PropTypes.string,
+  customSection: PropTypes.element,
   children: PropTypes.node,
 }
 
@@ -14,6 +15,8 @@ const defaultProps = {
   spacingTop: '',
   spacingTopTablet: '',
   maxWidth: '',
+  customSection: '',
+  children: '',
 }
 
 const Section = ({

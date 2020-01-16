@@ -9,9 +9,9 @@ import {
 import { Logo } from '../Logo'
 import { Navigation } from '../Navigation'
 
-import * as S from './styled'
-
 import * as routes from '../../routes'
+
+import * as S from './styled'
 
 const Header = () => {
   const intl = useIntl()

@@ -3,7 +3,13 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
-import { ReservationForm } from '../components/ReservationForm'
+import { Section } from '../components/Section'
+
+import { ReservationForm } from './Home/components/ReservationForm'
+import { Title } from './Home/components/Title'
+
+import { ReservationFormSection } from './Home/components/ReservationForm/styled'
+import { TitleSection } from './Home/components/Title/styled'
 
 const IndexPage = () => {
   const intl = useIntl()
@@ -12,7 +18,25 @@ const IndexPage = () => {
     <Layout>
       <SEO title={intl.formatMessage({ id: 'navigation-home' })} />
 
-      <ReservationForm />
+      <Section
+        maxWidth="320"
+        spacingTop="var(--s-m)"
+        spacingTopTablet="var(--s-l)"
+        customSection={() => (
+          <ReservationFormSection>
+            <ReservationForm />
+          </ReservationFormSection>
+        )}
+      />
+
+      <Section
+        spacingTop="default"
+        customSection={() => (
+          <TitleSection maxWidth="515">
+            <Title />
+          </TitleSection>
+        )}
+      />
     </Layout>
   )
 }

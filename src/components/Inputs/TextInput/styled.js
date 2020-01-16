@@ -5,7 +5,9 @@ import { globalInputCss } from '../BaseInput/styled'
 const Input = styled.input`
   ${globalInputCss}
 
-  max-width: 176px;
+  @media (min-width: 768px) {
+    max-width: 176px;
+  }
 `
 
 export { Input }

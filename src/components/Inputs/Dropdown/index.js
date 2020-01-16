@@ -56,7 +56,7 @@ const Dropdown = ({
       >
         <S.DropdownValueWrapper>
           <span>{value || label}</span>
-          <Caret />
+          <Caret blue={!value} />
         </S.DropdownValueWrapper>
       </S.DropdownToggle>
 

@@ -15,6 +15,20 @@ const CaretWrapper = styled.div`
   justify-content: center;
 `
 
+const LeftPart = styled.div`
+  ${partsCss}
+
+  left: 0;
+  transform: rotate(45deg);
+`
+
+const RightPart = styled.div`
+  ${partsCss}
+
+  right: 0;
+  transform: rotate(-45deg);
+`
+
 const Caret = styled.div`
   height: 12px;
   position: relative;
@@ -31,20 +45,15 @@ const Caret = styled.div`
     css`
       transform: rotate(-90deg);
     `}
-`
 
-const LeftPart = styled.div`
-  ${partsCss}
-
-  left: 0;
-  transform: rotate(45deg);
-`
-
-const RightPart = styled.div`
-  ${partsCss}
-
-  right: 0;
-  transform: rotate(-45deg);
+  ${props =>
+    props.blue &&
+    css`
+      ${LeftPart},
+      ${RightPart} {
+        background-color: var(--c-blue);
+      }
+    `}
 `
 
 export { CaretWrapper, Caret, LeftPart, RightPart }

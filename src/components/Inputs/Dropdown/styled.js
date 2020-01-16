@@ -21,11 +21,6 @@ const defaultDropownCss = css`
       text-decoration: underline;
     }
   }
-
-  ${LeftPart},
-  ${RightPart} {
-    background-color: var(--c-blue);
-  }
 `
 
 const DropdownToggle = styled.button`

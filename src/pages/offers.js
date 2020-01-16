@@ -5,11 +5,11 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 const OffersPage = () => {
-  const intl = useIntl()
+  const { formatMessage } = useIntl()
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation-offers' })} />
+      <SEO title={formatMessage({ id: 'navigation-offers' })} />
 
       <h1>Offers Page</h1>
     </Layout>

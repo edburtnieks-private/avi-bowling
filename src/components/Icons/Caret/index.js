@@ -6,16 +6,18 @@ import * as S from './styled'
 const propTypes = {
   left: PropTypes.bool,
   right: PropTypes.bool,
+  blue: PropTypes.bool,
 }
 
 const defaultProps = {
   left: false,
   right: false,
+  blue: false,
 }
 
-const Caret = ({ left, right }) => (
+const Caret = ({ left, right, blue }) => (
   <S.CaretWrapper>
-    <S.Caret left={left} right={right}>
+    <S.Caret left={left} right={right} blue={blue}>
       <S.LeftPart />
       <S.RightPart />
     </S.Caret>

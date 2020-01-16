@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [2, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "import/prefer-default-export": 0,
+    "react/jsx-props-no-spreading": 0
+  }
+}

@@ -28,6 +28,15 @@
     "yup": "^0.28.0"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.0.1",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1"
@@ -39,7 +48,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format:check": "prettier --check '*/**/*.{js,jsx,css,json,md}'",
+    "format:write": "prettier --write '*/**/*.{js,jsx,css,json,md}'",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -51,7 +63,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,json,md}": [
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,json,md}": [
       "prettier --write",
       "git add"
     ]

@@ -1,8 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { NavigationLink } from '../NavigationLink'
 
 import * as S from './styled'
+
+const propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.string,
+      text: PropTypes.string,
+    })
+  ).isRequired,
+}
 
 const Navigation = ({ links }) => (
   <S.Navigation>
@@ -15,5 +25,7 @@ const Navigation = ({ links }) => (
     </S.List>
   </S.Navigation>
 )
+
+Navigation.propTypes = propTypes
 
 export { Navigation }

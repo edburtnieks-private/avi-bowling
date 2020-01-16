@@ -22,7 +22,7 @@ const BaseInput = ({ name, id, label, children }) => (
     <ErrorMessageWrapper>
       <RHFErrorMessage
         name={name}
-        children={({ message }) => <ErrorMessage message={message} />}
+        children={({ message }) => <ErrorMessage message={message} />} // eslint-disable-line react/no-children-prop
       />
     </ErrorMessageWrapper>
   </>

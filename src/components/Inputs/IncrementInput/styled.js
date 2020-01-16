@@ -8,33 +8,6 @@ import {
   globalInputButtonCss,
 } from '../BaseInput/styled'
 
-const IncrementInputWrapper = styled.div`
-  ${globalInputWrapperCss}
-
-  background-color: var(--c-white);
-  display: flex;
-  justify-content: space-between;
-
-  @media (min-width: 768px) {
-    max-width: 120px;
-  }
-
-  ${props =>
-    props.disabled &&
-    css`
-      background-color: var(--c-silver);
-      box-shadow: none;
-
-      ${IncrementInput},
-      ${Button} {
-        &:disabled {
-          background-color: var(--c-mercury);
-          color: var(--c-silver);
-        }
-      }
-    `}
-`
-
 const IncrementInput = styled.input`
   ${globalInputCss}
 
@@ -64,6 +37,33 @@ const Button = styled.button`
       background-color: var(--c-silver);
     }
   }
+`
+
+const IncrementInputWrapper = styled.div`
+  ${globalInputWrapperCss}
+
+  background-color: var(--c-white);
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    max-width: 120px;
+  }
+
+  ${props =>
+    props.disabled &&
+    css`
+      background-color: var(--c-silver);
+      box-shadow: none;
+
+      ${IncrementInput},
+      ${Button} {
+        &:disabled {
+          background-color: var(--c-mercury);
+          color: var(--c-silver);
+        }
+      }
+    `}
 `
 
 export { IncrementInputWrapper, IncrementInput, Button }

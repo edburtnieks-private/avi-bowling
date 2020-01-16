@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { globalInputCss } from '../../Inputs/BaseInput/styled'
+import { globalInputCss } from '../BaseInput/styled'
 import {
   Caret,
   CaretWrapper,

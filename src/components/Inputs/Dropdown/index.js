@@ -14,6 +14,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,
   toggleDropdown: PropTypes.func.isRequired,
+  closeDropdown: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 }
 
@@ -54,7 +55,7 @@ const Dropdown = ({
         onClick={onDropdownToggle}
       >
         <S.DropdownValueWrapper>
-          <span>{value ? value : label}</span>
+          <span>{value || label}</span>
           <Caret />
         </S.DropdownValueWrapper>
       </S.DropdownToggle>

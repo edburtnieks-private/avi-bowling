@@ -93,25 +93,13 @@ const ReservationForm = () => {
     })
   }
 
-  const decrementLaneCount = value => {}
-
-  const incrementLaneCount = value => {}
-
-  const decrementDuration = value => {}
-
-  const incrementDuration = value => {}
-
   const decrementPlayerCount = value => {
     removePlayer(value - 1)
   }
 
-  const incrementPlayerCount = value => {
+  const incrementPlayerCount = () => {
     appendPlayer({ name: 'players' })
   }
-
-  const decrementShoeCount = value => {}
-
-  const incrementShoeCount = value => {}
 
   return (
     <FormContext {...reservationFormMethods}>
@@ -157,8 +145,6 @@ const ReservationForm = () => {
                       label={`${intl.formatMessage({ id: 'duration' })} (h)`}
                       minValue={minDuration}
                       maxValue={maxAvailableDuration}
-                      decrement={decrementDuration}
-                      increment={incrementDuration}
                     />
                   </S.Field>
                 </S.TimeFields>
@@ -173,8 +159,6 @@ const ReservationForm = () => {
               label={intl.formatMessage({ id: 'lane-count' })}
               minValue={minLaneCount}
               maxValue={maxLaneCount}
-              decrement={decrementLaneCount}
-              increment={incrementLaneCount}
             />
           </S.Field>
 
@@ -234,8 +218,6 @@ const ReservationForm = () => {
                       }
                       minValue={minShoeCount}
                       maxValue={maxShoeCount}
-                      decrement={decrementShoeCount}
-                      increment={incrementShoeCount}
                       disabled={!isShoes}
                     />
                   </S.Field>

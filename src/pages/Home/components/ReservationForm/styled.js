@@ -1,15 +1,5 @@
 import styled, { css } from 'styled-components'
 
-import { Section } from '../../../../components/Section/styled'
-
-const ReservationFormSection = styled(Section)`
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-  }
-`
-
 const MainFields = styled.div`
   margin-bottom: var(--s-s);
 
@@ -92,7 +82,6 @@ const Field = styled.div`
 `
 
 export {
-  ReservationFormSection,
   MainFields,
   DateAndTimeFields,
   CalendarWrapper,

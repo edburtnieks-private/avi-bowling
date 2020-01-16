@@ -37,5 +37,14 @@
   "player-count-min": "Minimum player count is 1",
   "player-count-max": "Maximum player count is 6",
   "shoe-count-min": "Minimum shoe count is 1",
-  "shoe-count-max": "Shoe count can't be more than player count"
+  "shoe-count-max": "Shoe count can't be more than player count",
+  "avi-bowling-title": "AVI bowling center",
+  "avi-bowling-subtitle": "Since 2012, AVI bowling has become one of the best and modern bowling centres in Riga, providing high quality bowling experience for both beginners and professionals.",
+  "we-offer": "We offer",
+  "we-offer-alleys": "Bowling alleys",
+  "we-offer-food-and-drinks": "Food and drinks at bar",
+  "we-offer-events-and-parties": "Events and parties",
+  "we-offer-instructors": "Intructors for beginners",
+  "we-offer-training": "Training for professionals",
+  "we-offer-bowling-club": "Bowling club"
 }

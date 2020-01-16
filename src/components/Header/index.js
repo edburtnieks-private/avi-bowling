@@ -8,17 +8,8 @@ import {
 
 import { Logo } from '../Logo'
 import { Navigation } from '../Navigation'
-import {
-  StyledHeader,
-  StyledHeaderInner,
-  StyledNavigationWrapper,
-  StyledNavigationToggle,
-  StyledRightWrapper,
-  StyledMakeReservationButton,
-  StyledLanguageList,
-  StyledLanguageListItem,
-  StyledLanguageButton,
-} from './styled'
+
+import * as S from './styled'
 
 import * as routes from '../../routes'
 
@@ -33,64 +24,62 @@ const Header = () => {
   const links = [
     {
       path: routes.HOME,
-      text: intl.formatMessage({ id: 'navigation_home' }),
+      text: intl.formatMessage({ id: 'navigation-home' }),
     },
     {
       path: routes.GALLERY,
-      text: intl.formatMessage({ id: 'navigation_gallery' }),
+      text: intl.formatMessage({ id: 'navigation-gallery' }),
     },
     {
       path: routes.OFFERS,
-      text: intl.formatMessage({ id: 'navigation_offers' }),
+      text: intl.formatMessage({ id: 'navigation-offers' }),
     },
     {
       path: routes.NEWS,
-      text: intl.formatMessage({ id: 'navigation_news' }),
+      text: intl.formatMessage({ id: 'navigation-news' }),
     },
     {
       path: routes.CONTACTS,
-      text: intl.formatMessage({ id: 'navigation_contacts' }),
+      text: intl.formatMessage({ id: 'navigation-contacts' }),
     },
   ]
 
   return (
-    <StyledHeader>
-      <StyledHeaderInner>
+    <S.Header>
+      <S.HeaderInner>
         <Link to={routes.HOME}>
           <Logo />
         </Link>
 
-        <StyledNavigationToggle onClick={toggleNavigation}>
+        <S.NavigationToggle onClick={toggleNavigation}>
           <FormattedMessage id="menu" />
-        </StyledNavigationToggle>
+        </S.NavigationToggle>
 
-        <StyledNavigationWrapper
-          data-show-navigation-content={isNavigationOpen}
-        >
+        <S.NavigationWrapper data-show-navigation-content={isNavigationOpen}>
           <Navigation links={links} />
 
-          <StyledRightWrapper>
-            <StyledMakeReservationButton to={routes.RESERVATION}>
-              <FormattedMessage id="make_reservation" />
-            </StyledMakeReservationButton>
+          <S.RightWrapper>
+            <S.Button secondary="true" to={routes.RESERVATION}>
+              <FormattedMessage id="make-reservation" />
+            </S.Button>
 
-            <StyledLanguageList>
-              <StyledLanguageListItem>
-                <StyledLanguageButton onClick={() => changeLocale('lv')}>
+            <S.LanguageList>
+              <S.LanguageListItem>
+                <S.LanguageButton onClick={() => changeLocale('lv')}>
                   Latviešu
-                </StyledLanguageButton>
-              </StyledLanguageListItem>
+                </S.LanguageButton>
+              </S.LanguageListItem>
 
-              <StyledLanguageListItem>
-                <StyledLanguageButton onClick={() => changeLocale('en')}>
+              <S.LanguageListItem>
+                <S.LanguageButton onClick={() => changeLocale('en')}>
                   English
-                </StyledLanguageButton>
-              </StyledLanguageListItem>
-            </StyledLanguageList>
-          </StyledRightWrapper>
-        </StyledNavigationWrapper>
-      </StyledHeaderInner>
-    </StyledHeader>
+                </S.LanguageButton>
+              </S.LanguageListItem>
+            </S.LanguageList>
+          </S.RightWrapper>
+        </S.NavigationWrapper>
+      </S.HeaderInner>
+    </S.Header>
   )
 }
 

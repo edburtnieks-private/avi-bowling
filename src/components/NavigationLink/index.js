@@ -4,7 +4,7 @@ import { navigate } from 'gatsby-plugin-intl'
 
 import BowlingBallIcon from '../../images/icons/bowling-ball-icon.svg'
 
-import { StyledListItem, StyledLink, StyledActiveIndicator } from './styled'
+import * as S from './styled'
 
 const propTypes = {
   to: PropTypes.string.isRequired,
@@ -76,23 +76,23 @@ const NavigationLink = ({ to, children }) => {
   }
 
   return (
-    <StyledListItem>
-      <StyledLink
+    <S.ListItem>
+      <S.Link
         to={to}
         activeClassName="active-link"
         innerRef={node => setActiveIndicator(node)}
         onClick={changeActiveLink}
       >
         {children}
-      </StyledLink>
+      </S.Link>
 
-      <StyledActiveIndicator
+      <S.ActiveIndicator
         src={BowlingBallIcon}
         alt="Active link indicator"
         className="active-indicator"
         aria-hidden="true"
       />
-    </StyledListItem>
+    </S.ListItem>
   )
 }
 

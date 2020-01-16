@@ -2,18 +2,18 @@ import React from 'react'
 
 import { NavigationLink } from '../NavigationLink'
 
-import { StyledNavigation, StyledList } from './styled'
+import * as S from './styled'
 
 const Navigation = ({ links }) => (
-  <StyledNavigation>
-    <StyledList>
+  <S.Navigation>
+    <S.List>
       {links.map(link => (
         <NavigationLink key={link.path} to={link.path}>
           {link.text}
         </NavigationLink>
       ))}
-    </StyledList>
-  </StyledNavigation>
+    </S.List>
+  </S.Navigation>
 )
 
 export { Navigation }

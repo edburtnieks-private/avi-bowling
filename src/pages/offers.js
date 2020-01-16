@@ -9,7 +9,7 @@ const OffersPage = () => {
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation_offers' })} />
+      <SEO title={intl.formatMessage({ id: 'navigation-offers' })} />
 
       <h1>Offers Page</h1>
     </Layout>

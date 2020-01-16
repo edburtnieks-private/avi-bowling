@@ -9,7 +9,7 @@ const ReservationPage = () => {
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation_reservation' })} />
+      <SEO title={intl.formatMessage({ id: 'navigation-reservation' })} />
 
       <h1>Reservation Page</h1>
     </Layout>

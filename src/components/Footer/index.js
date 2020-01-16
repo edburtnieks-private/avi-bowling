@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { StyledFooter } from './styled'
+import * as S from './styled'
 
 const Footer = () => (
-  <StyledFooter>
+  <S.Footer>
     <div></div>
-  </StyledFooter>
+  </S.Footer>
 )
 
 export { Footer }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby-plugin-intl'
+import { Link as IntlLink } from 'gatsby-plugin-intl'
 
-const StyledListItem = styled.li`
+const ListItem = styled.li`
   position: relative;
 
   @media (min-width: 1024px) {
@@ -19,7 +19,7 @@ const StyledListItem = styled.li`
   }
 `
 
-const StyledLink = styled(Link)`
+const Link = styled(IntlLink)`
   color: var(--c-mine-shaft);
   display: block;
   padding: var(--s-base) var(--s-0) var(--s-base) var(--s-m);
@@ -31,7 +31,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-const StyledActiveIndicator = styled.img`
+const ActiveIndicator = styled.img`
   left: 0;
   pointer-events: none;
   position: absolute;
@@ -48,4 +48,4 @@ const StyledActiveIndicator = styled.img`
   }
 `
 
-export { StyledListItem, StyledLink, StyledActiveIndicator }
+export { ListItem, Link, ActiveIndicator }

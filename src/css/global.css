@@ -8,24 +8,33 @@
   /* Box Shadows */
   --bs-header: 0px 4px 8px -2px var(--c-mercury-50);
   --bs-navigation: 0px 0px 24px 4px var(--c-mercury-50);
+  --bs-input: 0px 3px 9px var(--c-mercury);
+  --bs-input-hover: inset 0 0 0 1px var(--c-silver);
 
   /* Border Width */
   --bw-btn-s: 1px;
 
   /* Colors */
   --c-white: #fff;
+  --c-mercury: #e1e1e1;
+  --c-silver: #ccc;
+  --c-boulder: #757575;
   --c-mine-shaft: #3a3a3a;
 
   --c-green: #4cb114;
   --c-green-darker: #3c8c10;
+  --c-red: #f15e61;
+  --c-blue: #0680d1;
 
   /* Opacity Colors */
   --c-mercury-50: #e1e1e180;
+  --c-mine-shaft-30: #3a3a3a4d;
 
   /* Font Family */
   --ff-base: 'Montserrat', sans-serif;
 
   /* Font Size */
+  --fs-xxs: 0.625rem; /* 10px */
   --fs-xs: 0.75rem; /* 12px */
   --fs-s: 0.875rem; /* 14px */
   --fs-base: 16px;
@@ -33,6 +42,9 @@
   /* Font Weight */
   --fw-regular: 400;
   --fw-bold: 700;
+
+  /* Line Height */
+  --lh-base: 1;
 
   /* Letter Spacing */
   --ls-btn-s: 0.48px;
@@ -54,6 +66,8 @@
   /* Z Index */
   --zi-navigation: 1;
   --zi-navigation-toggle: 2;
+  --zi-dropdown-overlay: 10;
+  --zi-dropdown-content: 20;
 }
 
 html,
@@ -64,7 +78,7 @@ body,
 
 html {
   font-size: var(--fs-base);
-  line-height: 1;
+  line-height: var(--lh-base);
 }
 
 body {
@@ -77,8 +91,23 @@ body {
   position: relative;
 }
 
+button,
+select {
+  cursor: pointer;
+}
+
 button {
   color: var(--c-mine-shaft);
-  cursor: pointer;
   font-size: var(--fs-s);
+  padding: var(--s-0);
+}
+
+button:disabled {
+  color: var(--c-silver);
+}
+
+label {
+  display: block;
+  font-size: var(--fs-s);
+  padding-bottom: var(--s-xxs);
 }

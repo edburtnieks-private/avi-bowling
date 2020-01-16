@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby-plugin-intl'
+import { Link } from '../Button/styled'
 
 import { containerCss } from '../Container/styled'
 
-const StyledHeader = styled.header`
+const Header = styled.header`
   background-color: var(--c-white);
   box-shadow: var(--bs-header);
   font-size: var(--fs-base);
@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
   }
 `
 
-const StyledHeaderInner = styled.div`
+const HeaderInner = styled.div`
   ${containerCss}
 
   align-items: center;
@@ -23,7 +23,7 @@ const StyledHeaderInner = styled.div`
   justify-content: space-between;
 `
 
-const StyledNavigationWrapper = styled.div`
+const NavigationWrapper = styled.div`
   @media (max-width: 1023px) {
     background-color: var(--c-white);
     bottom: 0;
@@ -54,7 +54,7 @@ const StyledNavigationWrapper = styled.div`
   }
 `
 
-const StyledNavigationToggle = styled.button`
+const NavigationToggle = styled.button`
   background-color: var(--c-white);
   border: 0;
   font-weight: var(--fw-bold);
@@ -67,42 +67,26 @@ const StyledNavigationToggle = styled.button`
   }
 `
 
-const StyledRightWrapper = styled.div`
+const RightWrapper = styled.div`
   @media (min-width: 1024px) {
     align-items: center;
     display: flex;
   }
 `
 
-const StyledMakeReservationButton = styled(Link)`
-  background-color: var(--c-white);
-  border-radius: var(--br-base);
-  border: var(--bw-btn-s) solid var(--c-green);
-  color: var(--c-green);
-  display: block;
-  font-size: var(--fs-s);
-  font-weight: var(--fw-bold);
-  letter-spacing: var(--ls-btn-s);
-  padding: var(--s-btn-s-mobile);
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-
-  @media (min-width: 1024px) {
-    display: inline;
-    font-size: var(--fs-xs);
-    padding: var(--s-btn-s);
-    width: auto;
+const Button = styled(Link)`
+  @media (min-width: 768px) {
+    font-size: var(--fs-s);
+    padding: var(--s-btn-s-mobile);
   }
 
-  &:hover {
-    background-color: var(--c-green-darker);
-    border-color: var(--c-green-darker);
-    color: var(--c-white);
+  @media (min-width: 1024px) {
+    font-size: var(--fs-xs);
+    padding: var(--s-btn-s);
   }
 `
 
-const StyledLanguageList = styled.ul`
+const LanguageList = styled.ul`
   display: flex;
   list-style-type: none;
   margin: var(--s-l) var(--s-0) var(--s-0);
@@ -117,26 +101,26 @@ const StyledLanguageList = styled.ul`
   }
 `
 
-const StyledLanguageListItem = styled.li`
+const LanguageListItem = styled.li`
   &:not(:last-of-type) {
     margin-right: var(--s-xs);
   }
 `
 
-const StyledLanguageButton = styled.button`
+const LanguageButton = styled.button`
   background-color: var(--c-white);
   border: 0;
   padding: var(--s-0);
 `
 
 export {
-  StyledHeader,
-  StyledHeaderInner,
-  StyledNavigationWrapper,
-  StyledNavigationToggle,
-  StyledRightWrapper,
-  StyledMakeReservationButton,
-  StyledLanguageList,
-  StyledLanguageListItem,
-  StyledLanguageButton,
+  Header,
+  HeaderInner,
+  NavigationWrapper,
+  NavigationToggle,
+  RightWrapper,
+  Button,
+  LanguageList,
+  LanguageListItem,
+  LanguageButton,
 }

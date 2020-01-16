@@ -5,8 +5,8 @@ const containerCss = css`
   max-width: var(--bp-desktop-xl);
 `
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   ${containerCss}
 `
 
-export { StyledContainer, containerCss }
+export { Container, containerCss }

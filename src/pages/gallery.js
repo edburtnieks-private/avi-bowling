@@ -9,7 +9,7 @@ const GalleryPage = () => {
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation_gallery' })} />
+      <SEO title={intl.formatMessage({ id: 'navigation-gallery' })} />
 
       <h1>Gallery Page</h1>
     </Layout>

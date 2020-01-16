@@ -9,10 +9,10 @@ const NotFoundPage = () => {
 
   return (
     <Layout>
-      <SEO title={`404: ${intl.formatMessage({ id: 'not_found' })}`} />
+      <SEO title={`404: ${intl.formatMessage({ id: 'not-found' })}`} />
 
       <h1>
-        <FormattedMessage id="page_not_found" />
+        <FormattedMessage id="page-not-found" />
       </h1>
     </Layout>
   )

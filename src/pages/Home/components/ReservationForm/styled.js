@@ -1,14 +1,11 @@
 import styled, { css } from 'styled-components'
 
-const ReservationFormWrapper = styled.div`
-  margin: var(--s-m) auto var(--s-0);
-  max-width: 320px;
-  padding: var(--s-0) var(--s-s);
+import { Section } from '../../../../components/Section/styled'
 
+const ReservationFormSection = styled(Section)`
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    margin-top: var(--s-l);
     max-width: 100%;
   }
 `
@@ -95,7 +92,7 @@ const Field = styled.div`
 `
 
 export {
-  ReservationFormWrapper,
+  ReservationFormSection,
   MainFields,
   DateAndTimeFields,
   CalendarWrapper,

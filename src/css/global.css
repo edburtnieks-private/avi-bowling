@@ -45,6 +45,7 @@
 
   /* Line Height */
   --lh-base: 1;
+  --lh-s: 2;
 
   /* Letter Spacing */
   --ls-btn-s: 0.48px;
@@ -58,6 +59,7 @@
   --s-s: 1.5rem; /* 24px */
   --s-m: 2rem; /* 32px */
   --s-l: 3rem; /* 48px */
+  --s-xl: 4.5rem; /* 72px */
   --s-xxl: 6rem; /* 96px */
 
   --s-btn-s-mobile: var(--s-xs) var(--s-base);

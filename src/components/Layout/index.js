@@ -10,7 +10,7 @@ const propTypes = {
 const Layout = ({ children }) => (
   <>
     <Header />
-    <main>{children}</main>
+    {children}
   </>
 )
 

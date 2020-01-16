@@ -14,13 +14,15 @@ const propTypes = {
   label: PropTypes.node.isRequired,
   minValue: PropTypes.number.isRequired,
   maxValue: PropTypes.number.isRequired,
-  decrement: PropTypes.func.isRequired,
-  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func,
+  increment: PropTypes.func,
   disabled: PropTypes.bool,
 }
 
 const defaultProps = {
   disabled: false,
+  decrement: undefined,
+  increment: undefined,
 }
 
 const IncrementInput = ({
@@ -40,7 +42,9 @@ const IncrementInput = ({
     if (getValues()[name] > minValue) {
       const newValue = +getValues()[name] - 1
 
-      decrement(newValue)
+      if (decrement) {
+        decrement(newValue)
+      }
 
       setValue(name, newValue)
     }
@@ -50,7 +54,9 @@ const IncrementInput = ({
     if (getValues()[name] < maxValue) {
       const newValue = +getValues()[name] + 1
 
-      increment(newValue)
+      if (increment) {
+        increment(newValue)
+      }
 
       setValue(name, newValue)
     }

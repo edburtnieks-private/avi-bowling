@@ -7,7 +7,9 @@ const propTypes = {
   spacingTop: PropTypes.string,
   spacingTopTablet: PropTypes.string,
   maxWidth: PropTypes.string,
-  customSection: PropTypes.element,
+  customSection: PropTypes.func,
+  center: PropTypes.bool,
+  centerTablet: PropTypes.bool,
   children: PropTypes.node,
 }
 
@@ -15,7 +17,9 @@ const defaultProps = {
   spacingTop: '',
   spacingTopTablet: '',
   maxWidth: '',
-  customSection: '',
+  customSection: undefined,
+  center: false,
+  centerTablet: false,
   children: '',
 }
 
@@ -24,13 +28,21 @@ const Section = ({
   spacingTopTablet,
   maxWidth,
   customSection,
+  center,
+  centerTablet,
   children,
 }) => (
   <S.SectionWrapper spacingTop={spacingTop} spacingTopTablet={spacingTopTablet}>
     {customSection ? (
       customSection(children)
     ) : (
-      <S.Section maxWidth={maxWidth}>{children}</S.Section>
+      <S.Section
+        maxWidth={maxWidth}
+        center={center}
+        centerTablet={centerTablet}
+      >
+        {children}
+      </S.Section>
     )}
   </S.SectionWrapper>
 )

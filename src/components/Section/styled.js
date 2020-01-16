@@ -31,11 +31,30 @@ const SectionWrapper = styled.div`
 
 const Section = styled.section`
   margin: var(--s-0) auto;
+  max-width: var(--bp-desktop-xl);
 
   ${props =>
     props.maxWidth &&
     css`
       max-width: ${props.maxWidth}px;
+    `}
+
+  ${props =>
+    props.center &&
+    css`
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    `}
+
+  ${props =>
+    props.centerTablet &&
+    css`
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        max-width: var(--bp-desktop-xl);
+      }
     `}
 `
 

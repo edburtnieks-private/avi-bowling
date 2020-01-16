@@ -61,6 +61,7 @@
   --s-l: 3rem; /* 48px */
   --s-xl: 4.5rem; /* 72px */
   --s-xxl: 6rem; /* 96px */
+  --s-xxxl: 18rem; /* 288px */
 
   --s-btn-s-mobile: var(--s-xs) var(--s-base);
   --s-btn-s: var(--s-xxs) var(--s-base);

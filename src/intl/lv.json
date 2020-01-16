@@ -37,5 +37,14 @@
   "player-count-min": "Minimālais spēlētāju skaits ir 1",
   "player-count-max": "Maksimālais spēlētāju skaits ir 6",
   "shoe-count-min": "Minimālais apavu skaits ir 1",
-  "shoe-count-max": "Apavu skaits nevar pārsniegt spēlētāju skaitu"
+  "shoe-count-max": "Apavu skaits nevar pārsniegt spēlētāju skaitu",
+  "avi-bowling-title": "AVI boulinga centrs",
+  "avi-bowling-subtitle": "Kopš 2012 gada, AVI boulings ir tapis par vienu no vismodernākajiem boulinga centriem Rīgā, gādājot augstas kvalitātes boulinga iespējas gan iesācējiem, gan profesionāļiem.",
+  "we-offer": "Mēs piedāvājam",
+  "we-offer-alleys": "Boulinga celiņus",
+  "we-offer-food-and-drinks": "Ēdienus un dzērienus bārā",
+  "we-offer-events-and-parties": "Pasākumus un ballītes",
+  "we-offer-instructors": "Instruktorus iesācējiem",
+  "we-offer-training": "Treniņus profesionāļiem",
+  "we-offer-bowling-club": "Boulinga klubu"
 }

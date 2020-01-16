@@ -5,11 +5,11 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
 const ReservationPage = () => {
-  const intl = useIntl()
+  const { formatMessage } = useIntl()
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation-reservation' })} />
+      <SEO title={formatMessage({ id: 'navigation-reservation' })} />
 
       <h1>Reservation Page</h1>
     </Layout>

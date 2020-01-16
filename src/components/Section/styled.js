@@ -29,6 +29,11 @@ const SectionWrapper = styled.div`
     `}
 `
 
+const alignmentCss = css`
+  display: flex;
+  flex-direction: column;
+`
+
 const Section = styled.section`
   margin: var(--s-0) auto;
   max-width: var(--bp-desktop-xl);
@@ -42,18 +47,26 @@ const Section = styled.section`
   ${props =>
     props.center &&
     css`
+      ${alignmentCss}
       align-items: center;
-      display: flex;
-      flex-direction: column;
     `}
 
   ${props =>
     props.centerTablet &&
     css`
       @media (min-width: 768px) {
-        display: flex;
-        justify-content: center;
+        ${alignmentCss}
+        align-items: center;
         max-width: var(--bp-desktop-xl);
+      }
+    `}
+
+  ${props =>
+    props.rightDesktop &&
+    css`
+      @media (min-width: 1024px) {
+        ${alignmentCss}
+        align-items: flex-end;
       }
     `}
 `

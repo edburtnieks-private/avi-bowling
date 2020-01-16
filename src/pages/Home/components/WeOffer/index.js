@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
-import { H2 } from '../../../../components/Typography'
+import { SectionTitle } from '../../../../components/SectionTitle'
 
 import * as S from './styled'
 
@@ -17,13 +17,16 @@ const propTypes = {
 
 const WeOffer = ({ offers }) => (
   <>
-    <H2>
+    <SectionTitle>
       <FormattedMessage id="we-offer" />
-    </H2>
+    </SectionTitle>
 
     <S.OfferList>
       {offers.map(offer => (
-        <S.Offer key={offer.key}>{offer.text}</S.Offer>
+        <S.Offer key={offer.key}>
+          <S.Image />
+          {offer.text}
+        </S.Offer>
       ))}
     </S.OfferList>
   </>

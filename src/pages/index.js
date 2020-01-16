@@ -8,42 +8,43 @@ import { Section } from '../components/Section'
 import { ReservationForm } from './Home/components/ReservationForm'
 import { Title } from './Home/components/Title'
 import { WeOffer } from './Home/components/WeOffer'
+import { Gallery } from './Home/components/Gallery'
 
 import { TitleSection } from './Home/components/Title/styled'
 
 const IndexPage = () => {
-  const intl = useIntl()
+  const { formatMessage } = useIntl()
 
   const offers = [
     {
-      text: `10 ${intl.formatMessage({ id: 'we-offer-alleys' })}`,
+      text: `10 ${formatMessage({ id: 'we-offer-alleys' })}`,
       key: 'we-offer-alleys',
     },
     {
-      text: intl.formatMessage({ id: 'we-offer-food-and-drinks' }),
+      text: formatMessage({ id: 'we-offer-food-and-drinks' }),
       key: 'we-offer-food-and-drinks',
     },
     {
-      text: intl.formatMessage({ id: 'we-offer-events-and-parties' }),
+      text: formatMessage({ id: 'we-offer-events-and-parties' }),
       key: 'we-offer-events-and-parties',
     },
     {
-      text: intl.formatMessage({ id: 'we-offer-instructors' }),
+      text: formatMessage({ id: 'we-offer-instructors' }),
       key: 'we-offer-instructors',
     },
     {
-      text: intl.formatMessage({ id: 'we-offer-training' }),
+      text: formatMessage({ id: 'we-offer-training' }),
       key: 'we-offer-training',
     },
     {
-      text: intl.formatMessage({ id: 'we-offer-bowling-club' }),
+      text: formatMessage({ id: 'we-offer-bowling-club' }),
       key: 'we-offer-bowling-club',
     },
   ]
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation-home' })} />
+      <SEO title={formatMessage({ id: 'navigation-home' })} />
 
       <Section
         maxWidth="320"
@@ -65,6 +66,10 @@ const IndexPage = () => {
 
       <Section spacingTop="var(--s-xxxl)" center>
         <WeOffer offers={offers} />
+      </Section>
+
+      <Section spacingTop="var(--s-xxxl)" center rightDesktop>
+        <Gallery />
       </Section>
     </Layout>
   )

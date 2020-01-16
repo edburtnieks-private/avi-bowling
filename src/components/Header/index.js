@@ -14,7 +14,7 @@ import * as routes from '../../routes'
 import * as S from './styled'
 
 const Header = () => {
-  const intl = useIntl()
+  const { formatMessage } = useIntl()
   const [isNavigationOpen, setIsNavigationOpen] = useState(false)
 
   const toggleNavigation = () => {
@@ -24,23 +24,23 @@ const Header = () => {
   const links = [
     {
       path: routes.HOME,
-      text: intl.formatMessage({ id: 'navigation-home' }),
+      text: formatMessage({ id: 'navigation-home' }),
     },
     {
       path: routes.GALLERY,
-      text: intl.formatMessage({ id: 'navigation-gallery' }),
+      text: formatMessage({ id: 'navigation-gallery' }),
     },
     {
       path: routes.OFFERS,
-      text: intl.formatMessage({ id: 'navigation-offers' }),
+      text: formatMessage({ id: 'navigation-offers' }),
     },
     {
       path: routes.NEWS,
-      text: intl.formatMessage({ id: 'navigation-news' }),
+      text: formatMessage({ id: 'navigation-news' }),
     },
     {
       path: routes.CONTACTS,
-      text: intl.formatMessage({ id: 'navigation-contacts' }),
+      text: formatMessage({ id: 'navigation-contacts' }),
     },
   ]
 

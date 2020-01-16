@@ -21,7 +21,7 @@ import { reservationSchema } from './schema'
 import * as S from './styled'
 
 const ReservationForm = () => {
-  const intl = useIntl()
+  const { locale, formatDate, formatMessage } = useIntl()
   const [isDateAndTimeDropdownOpen, setDateAndTimeDropdown] = useState(false)
   const [isMoreDetailsDropdownOpen, setMoreDetailsDropdown] = useState(false)
 
@@ -59,7 +59,7 @@ const ReservationForm = () => {
   const isShoes = reservationFormMethods.watch('isShoes')
 
   const formatDateAndTime = (date, startTime) =>
-    `${date.toLocaleDateString(intl.locale, {
+    `${date.toLocaleDateString(locale, {
       month: 'long',
       day: 'numeric',
     })}, ${startTime}:00`
@@ -71,9 +71,8 @@ const ReservationForm = () => {
     showFixedNumberOfWeeks: true,
     prevLabel: <Caret left />,
     nextLabel: <Caret right />,
-    locale: intl.locale,
-    formatShortWeekday: (_, date) =>
-      intl.formatDate(date, { weekday: 'narrow' }),
+    locale,
+    formatShortWeekday: (_, date) => formatDate(date, { weekday: 'narrow' }),
   }
 
   const availableTimes = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
@@ -108,7 +107,7 @@ const ReservationForm = () => {
           <S.Field>
             <Dropdown
               id="date-and-time"
-              label={intl.formatMessage({ id: 'date-and-time' })}
+              label={formatMessage({ id: 'date-and-time' })}
               value={formatDateAndTime(
                 reservationFormMethods.watch('date'),
                 reservationFormMethods.watch('startTime')
@@ -132,7 +131,7 @@ const ReservationForm = () => {
                     <Select
                       name="startTime"
                       id="start-time"
-                      label={intl.formatMessage({ id: 'start-time' })}
+                      label={formatMessage({ id: 'start-time' })}
                       options={availableTimes}
                       customOptionTextEnd=":00"
                     />
@@ -142,7 +141,7 @@ const ReservationForm = () => {
                     <IncrementInput
                       name="duration"
                       id="duration"
-                      label={`${intl.formatMessage({ id: 'duration' })} (h)`}
+                      label={`${formatMessage({ id: 'duration' })} (h)`}
                       minValue={minDuration}
                       maxValue={maxAvailableDuration}
                     />
@@ -156,7 +155,7 @@ const ReservationForm = () => {
             <IncrementInput
               name="laneCount"
               id="lane-count"
-              label={intl.formatMessage({ id: 'lane-count' })}
+              label={formatMessage({ id: 'lane-count' })}
               minValue={minLaneCount}
               maxValue={maxLaneCount}
             />
@@ -166,7 +165,7 @@ const ReservationForm = () => {
             <TextInput
               name="name"
               id="name"
-              label={intl.formatMessage({ id: 'name' })}
+              label={formatMessage({ id: 'name' })}
               type="text"
             />
           </S.Field>
@@ -175,7 +174,7 @@ const ReservationForm = () => {
             <TextInput
               name="phone"
               id="phone"
-              label={intl.formatMessage({ id: 'phone' })}
+              label={formatMessage({ id: 'phone' })}
               type="text"
             />
           </S.Field>
@@ -184,7 +183,7 @@ const ReservationForm = () => {
         <S.Footer>
           <S.MoreDetailsDropdownWrapper>
             <Dropdown
-              label={intl.formatMessage({ id: 'more-details' })}
+              label={formatMessage({ id: 'more-details' })}
               isOpen={isMoreDetailsDropdownOpen}
               toggleDropdown={() =>
                 setMoreDetailsDropdown(!isMoreDetailsDropdownOpen)
@@ -197,7 +196,7 @@ const ReservationForm = () => {
                     <IncrementInput
                       name="playerCount"
                       id="player-count"
-                      label={intl.formatMessage({ id: 'players' })}
+                      label={formatMessage({ id: 'players' })}
                       minValue={minPlayerCount}
                       maxValue={maxPlayerCount}
                       decrement={decrementPlayerCount}
@@ -213,7 +212,7 @@ const ReservationForm = () => {
                         <Checkbox
                           name="isShoes"
                           id="is-shoes"
-                          label={intl.formatMessage({ id: 'shoes' })}
+                          label={formatMessage({ id: 'shoes' })}
                         />
                       }
                       minValue={minShoeCount}
@@ -232,7 +231,7 @@ const ReservationForm = () => {
                         <TextInput
                           name={`players[${index}]`}
                           id={`player-${playerIndex}`}
-                          label={`${intl.formatMessage({
+                          label={`${formatMessage({
                             id: 'player',
                           })} ${playerIndex}`}
                           type="text"

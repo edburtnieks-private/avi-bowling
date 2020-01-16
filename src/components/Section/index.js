@@ -10,6 +10,7 @@ const propTypes = {
   customSection: PropTypes.func,
   center: PropTypes.bool,
   centerTablet: PropTypes.bool,
+  rightDesktop: PropTypes.bool,
   children: PropTypes.node,
 }
 
@@ -20,6 +21,7 @@ const defaultProps = {
   customSection: undefined,
   center: false,
   centerTablet: false,
+  rightDesktop: false,
   children: '',
 }
 
@@ -30,6 +32,7 @@ const Section = ({
   customSection,
   center,
   centerTablet,
+  rightDesktop,
   children,
 }) => (
   <S.SectionWrapper spacingTop={spacingTop} spacingTopTablet={spacingTopTablet}>
@@ -40,6 +43,7 @@ const Section = ({
         maxWidth={maxWidth}
         center={center}
         centerTablet={centerTablet}
+        rightDesktop={rightDesktop}
       >
         {children}
       </S.Section>

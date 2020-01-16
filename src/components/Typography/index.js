@@ -6,7 +6,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-weight: var(--fw-regular);
-  margin: var(--s-0) var(--s-0) var(--s-xxl);
+  margin: var(--s-0);
 `
 
 const P = styled.p`

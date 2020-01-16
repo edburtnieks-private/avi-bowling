@@ -9,7 +9,7 @@ const ContactsPage = () => {
 
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'navigation_contacts' })} />
+      <SEO title={intl.formatMessage({ id: 'navigation-contacts' })} />
 
       <h1>Contacts Page</h1>
     </Layout>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledNavigation = styled.nav`
+const Navigation = styled.nav`
   margin-bottom: var(--s-m);
 
   @media (min-width: 1024px) {
@@ -8,7 +8,7 @@ const StyledNavigation = styled.nav`
   }
 `
 
-const StyledList = styled.ul`
+const List = styled.ul`
   margin: var(--s-0);
 
   @media (min-width: 1024px) {
@@ -16,4 +16,4 @@ const StyledList = styled.ul`
   }
 `
 
-export { StyledNavigation, StyledList }
+export { Navigation, List }

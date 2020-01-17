@@ -1,3 +1,4 @@
+// @flow
 import styled, { css } from 'styled-components'
 import { Link as IntlLink } from 'gatsby-plugin-intl'
 

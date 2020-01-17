@@ -1,25 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
+import * as React from 'react'
 
 import * as S from './styled'
 
-const propTypes = {
-  primary: PropTypes.bool,
-  secondary: PropTypes.bool,
-  to: PropTypes.string,
-  disabled: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+type ButtonProps = {
+  primary: boolean,
+  secondary: boolean,
+  to: string,
+  disabled: boolean,
+  children: ?React.Node,
 }
+type ButtonType = React.StatelessFunctionalComponent<ButtonProps>
 
-const defaultProps = {
-  primary: true,
-  secondary: false,
-  to: '',
-  disabled: false,
-}
-
-const Button = ({ primary = true, secondary, to, disabled, children }) =>
-  to ? (
+const Button: ButtonType = ({
+  primary = true,
+  secondary = false,
+  to = '',
+  disabled = false,
+  children,
+}: ButtonProps) => {
+  return to ? (
     <S.Link primary={primary} secondary={secondary} to={to} disabled={disabled}>
       {children}
     </S.Link>
@@ -28,8 +28,6 @@ const Button = ({ primary = true, secondary, to, disabled, children }) =>
       {children}
     </S.Button>
   )
-
-Button.propTypes = propTypes
-Button.defaultProps = defaultProps
+}
 
 export { Button }

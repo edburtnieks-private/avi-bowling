@@ -6,7 +6,7 @@
   "author": "Edgar Burtnieks <edburtnieks@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.18.12",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-intl": "^0.3.2",
     "gatsby-plugin-manifest": "^2.2.31",
